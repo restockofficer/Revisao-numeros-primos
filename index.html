@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <!-- Nome:Valentin Martins do Amaral   N°   Turma:3°A -->
+<!-- Nome:Tales costa caetano silva   N°   Turma:3°A -->
+<!-- Nome:   N°   Turma:3°A -->
+<!-- Nome:Valentin Martins do Amaral   N°   Turma:3°A -->
+<!-- Nome:Valentin Martins do Amaral   N°   Turma:3°A -->
 <html lang="Pt-BR">
     <head>
         <title>Primos V1 For</title>
@@ -7,10 +11,18 @@
         <script>
             function ReceberNumero(){
                 var canvas = document.getElementById('meuCanva');
-                if(canvas.getcontext)(
-                    varcntxt=canvas.getcontext('2D');
-                    
-                )
+                if (canvas.getContext){
+                    var cntxt=canvas.getcontext('2D');
+                    var maxWidth = 300;
+                    var lineHeight = 35;
+                    var x = (canvas.widht - maxWidth) /2;
+                    var y = 60;
+
+                    var N1 = parseInt(document.getElementById("Numero1").value, 10);
+                    cntxt.fillStyle="RGB(255,255,255)";
+                    cntxt.fillRect=(0, 0, canvas.widht, canvas.Height);
+                    cntxt.Font="30px Comiic SANS MS";
+                }
             }
         </script>
     </head>
