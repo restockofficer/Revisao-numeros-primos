@@ -9,32 +9,29 @@
         <title>Primos V1 For</title>
         <meta charset="UTF-8">
         <script>
-            function ReceberNumero(){
-                var canvas = document.getElementById('meuCanva');
-                if (canvas.getContext){
-                    var cntxt=canvas.getcontext('2D');
-                    var maxWidth = 300;
-                    var lineHeight = 35;
-                    var x = (canvas.widht - maxWidth) /2;
-                    var y = 60;
-                    
-                    function Verificador() {
-                    var N1 = document.getElementById('numberInput').value;
-                    N1 = parseInt(N1);
-    
-                  var Primo = N1 > 1;
-    
+
+        function Verificador() {
+            var canvas = document.getElementById('meuCanvas');
+            var cntx = canvas.getContext('2d');
+            cntx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            var N1 = document.getElementById('numberInput').value;
+                N1 = parseInt(N1);
+                var Primo = N1 > 1;
                 for (var R = 2; i <= Math.sqrt(N1); R++) {
                     if (N1 % i === 0) {
                         Primo = false;
                         break;
                     }
                 }
+            
+           
+
     
                 if (isPrime) {
-                    ctx.fillText(N1 + ' é um número primo.', 30, canvas.height / 2);
+                    cntx.fillText(N1 + ' é um número primo.', 30, canvas.height / 2);
                 } else {
-                    ctx.fillText(N1 + ' não é um número primo.', 20, canvas.height / 2);
+                    cntx.fillText(N1 + ' não é um número primo.', 20, canvas.height / 2);
                 }
             }
         }
