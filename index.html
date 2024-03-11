@@ -17,21 +17,36 @@
                     var lineHeight = 35;
                     var x = (canvas.widht - maxWidth) /2;
                     var y = 60;
-
-                    var N1 = parseInt(document.getElementById("Numero1").value, 10);
-                    cntxt.fillStyle="RGB(255,255,255)";
-                    cntxt.fillRect=(0, 0, canvas.widht, canvas.Height);
-                    cntxt.Font="30px Times new roman";
+                    
+                    function Verificador() {
+                    var N1 = document.getElementById('numberInput').value;
+                    N1 = parseInt(N1);
+    
+                  var Primo = N1 > 1;
+    
+                for (var R = 2; i <= Math.sqrt(N1); R++) {
+                    if (N1 % i === 0) {
+                        Primo = false;
+                        break;
+                    }
+                }
+    
+                if (isPrime) {
+                    ctx.fillText(N1 + ' é um número primo.', 30, canvas.height / 2);
+                } else {
+                    ctx.fillText(N1 + ' não é um número primo.', 20, canvas.height / 2);
                 }
             }
-        </script>
-    </head>
-
-
-hcvb
-
-
-
-
-
+        }
+    </script>
+</head>
+<body>
+</div>
+    <h1>Primos</h1>
+   <label for="numberInput">Digite um número:</label>
+    <input type="number" id="numberInput">
+    <button onclick="Verificador()">Verificar</button>
+    <canvas id="meuCanvas" widht="400" height="400" style="border:1px solid #0000; background-color:white"></canvas>
+</div>
+</body>
 </html>
