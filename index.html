@@ -16,7 +16,7 @@
             N1 = parseInt(N1);
 
             var Primo = N1 > 1;
-            for (var R = 2; i <= Math.sqrt(N1); R++) {
+            for (var R = 2; R <= Math.sqrt(N1); R++) {
                 if (N1 % R === 0) {
                     Primo = false;
                     break;
@@ -34,6 +34,7 @@
             }
         }
     </script>
+    <h1>Primos</h1>
     <label for="numberInput">Digite um número:</label>
     <input type="text" id="numberInput">
     <button onclick="verificador()">Verificar</button>
